@@ -1,0 +1,8 @@
+name: popt
+version: '1.19'
+description: The popt package contains the popt libraries which are used by some programs
+  to parse command-line options.
+author: Jeff Johnson
+maintainer: Skythrew
+sources:
+- http://ftp.rpm.org/|name|/releases/|name|-1.x/|name|-|version|.tar.gz
