@@ -1,0 +1,12 @@
+name: freetype
+version: 2.13.0
+description: The FreeType2 package contains a library which allows applications to
+  properly render TrueType fonts.
+author: David Turner
+maintainer: Skythrew
+sources:
+- https://downloads.sourceforge.net/|name|/|name|-|version|.tar.xz
+- https://downloads.sourceforge.net/|name|/|name|-doc-|version|.tar.xz
+deps:
+- libpng
+- which
