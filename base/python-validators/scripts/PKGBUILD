@@ -1,5 +1,0 @@
-tar -xf $SRC/$version.tar.*
-cd validators-$version
-
-python3 setup.py build
-python3 setup.py install --root=$PKG
