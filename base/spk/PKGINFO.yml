@@ -1,0 +1,12 @@
+name: spk
+version: 1.0.0
+description: SPK is the new package manager of Stock Linux, with easier commands and
+  a new logic behind the scenes.
+author: Stock Linux Team
+maintainer: Skythrew
+sources:
+- https://github.com/stock-linux/|name|/archive/refs/tags/|version|.tar.gz
+run:
+- python
+- python-docopt
+- python-validators
