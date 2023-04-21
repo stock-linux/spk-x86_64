@@ -1,0 +1,7 @@
+name: which
+version: '2.21'
+description: GNU which package.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz
