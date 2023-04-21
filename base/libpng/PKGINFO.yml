@@ -1,0 +1,13 @@
+name: libpng
+version: 1.6.39
+description: The libpng package contains libraries used by other programs for reading
+  and writing PNG files. The PNG format was designed as a replacement for GIF and,
+  to a lesser extent, TIFF, with many improvements and extensions and lack of patent
+  problems.
+author: Cosmin Truta
+maintainer: Skythrew
+sources:
+- https://downloads.sourceforge.net/|name|/|name|-|version|.tar.xz
+- https://downloads.sourceforge.net/sourceforge/|name|-apng/|name|-|version|-apng.patch.gz
+deps:
+- gzip

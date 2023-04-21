@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+gzip -cd $SRC/$name-$version-apng.patch.gz | patch -p1
+
+./configure --prefix=/usr --disable-static &&
+make
+
+make DESTDIR=$PKG install &&
+mkdir -pv $PKG/usr/share/doc/$name-$version &&
+cp -v README libpng-manual.txt $PKG/usr/share/doc/$name-$version
