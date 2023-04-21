@@ -1,0 +1,21 @@
+name: linux
+version: 6.2.12
+description: The well-known Linux kernel
+author: Linus Torvalds
+maintainer: Skythrew
+sources:
+- https://cdn.kernel.org/pub/|name|/kernel/v6.x/|name|-|version|.tar.xz
+- config
+deps:
+- kmod
+- bison
+- flex
+- perl
+- gmp
+- mpc
+- libelf
+- diffutils
+- cpio
+- bc
+run:
+- kmod

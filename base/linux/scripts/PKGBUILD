@@ -1,0 +1,20 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+make mrproper
+cp $SRC/config .config
+make
+
+make INSTALL_MOD_PATH=$PKG INSTALL_MOD_STRIP=1 modules_install
+KERNEL_VERSION="$(basename $PKG/lib/modules/*)"
+depmod -b $PKG -a ${KERNEL_VERSION}
+
+mkdir -p $PKG/boot
+
+cp  System.map \
+$PKG/boot/System.map-${KERNEL_VERSION}
+cp  .config    \
+$PKG/boot/config-${KERNEL_VERSION}
+cp  arch/x86_64/boot/bzImage \
+$PKG/boot/vmlinuz-$version
+ln -sf vmlinuz-$version $PKG/boot/kernel
