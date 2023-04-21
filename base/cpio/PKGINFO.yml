@@ -1,0 +1,7 @@
+name: cpio
+version: '2.13'
+description: The cpio package contains tools for archiving.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.bz2

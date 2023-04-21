@@ -1,0 +1,21 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+sed -i '/The name/,+2 d' src/global.c
+
+./configure --prefix=/usr \
+            --bindir=/bin \
+            --enable-mt   \
+            --with-rmt=/usr/libexec/rmt &&
+make
+makeinfo --html            -o doc/html      doc/cpio.texi &&
+makeinfo --html --no-split -o doc/cpio.html doc/cpio.texi &&
+makeinfo --plaintext       -o doc/cpio.txt  doc/cpio.texi
+
+make DESTDIR=$PKG install
+
+install -v -m755 -d $PKG/usr/share/doc/$name-$version/html &&
+install -v -m644    doc/html/* \
+                    $PKG/usr/share/doc/$name-$version/html &&
+install -v -m644    doc/cpio.{html,txt} \
+                    $PKG/usr/share/doc/$name-$version
