@@ -1,0 +1,9 @@
+name: efivar
+version: '38'
+description: The efivar package provides tools and libraries to manipulate EFI variables.
+author: Peter Jones
+maintainer: Skythrew
+sources:
+- https://github.com/rhboot/|name|/releases/download/|version|/|name|-|version|.tar.bz2
+deps:
+- mandoc
