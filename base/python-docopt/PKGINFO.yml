@@ -1,0 +1,11 @@
+name: python-docopt
+version: 0.6.2
+description: Pythonic command line arguments parser, that will make you smile
+author: Vladimir Keleshev
+maintainer: Skythrew
+sources:
+- https://github.com/docopt/docopt/archive/refs/tags/|version|.tar.gz
+deps:
+- python
+run:
+- python
