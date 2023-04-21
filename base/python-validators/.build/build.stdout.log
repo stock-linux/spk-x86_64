@@ -1,0 +1,99 @@
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/validators
+copying validators/__init__.py -> build/lib/validators
+copying validators/between.py -> build/lib/validators
+copying validators/btc_address.py -> build/lib/validators
+copying validators/card.py -> build/lib/validators
+copying validators/domain.py -> build/lib/validators
+copying validators/email.py -> build/lib/validators
+copying validators/extremes.py -> build/lib/validators
+copying validators/hashes.py -> build/lib/validators
+copying validators/iban.py -> build/lib/validators
+copying validators/ip_address.py -> build/lib/validators
+copying validators/length.py -> build/lib/validators
+copying validators/mac_address.py -> build/lib/validators
+copying validators/slug.py -> build/lib/validators
+copying validators/truthy.py -> build/lib/validators
+copying validators/url.py -> build/lib/validators
+copying validators/utils.py -> build/lib/validators
+copying validators/uuid.py -> build/lib/validators
+creating build/lib/validators/i18n
+copying validators/i18n/__init__.py -> build/lib/validators/i18n
+copying validators/i18n/es.py -> build/lib/validators/i18n
+copying validators/i18n/fi.py -> build/lib/validators/i18n
+running egg_info
+creating validators.egg-info
+writing validators.egg-info/PKG-INFO
+writing dependency_links to validators.egg-info/dependency_links.txt
+writing requirements to validators.egg-info/requires.txt
+writing top-level names to validators.egg-info/top_level.txt
+writing manifest file 'validators.egg-info/SOURCES.txt'
+reading manifest file 'validators.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'validators.egg-info/SOURCES.txt'
+running install
+running build
+running build_py
+running egg_info
+writing validators.egg-info/PKG-INFO
+writing dependency_links to validators.egg-info/dependency_links.txt
+writing requirements to validators.egg-info/requires.txt
+writing top-level names to validators.egg-info/top_level.txt
+reading manifest file 'validators.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'validators.egg-info/SOURCES.txt'
+running install_lib
+creating /tmp/spkr-build-python-validators/dist/usr
+creating /tmp/spkr-build-python-validators/dist/usr/lib
+creating /tmp/spkr-build-python-validators/dist/usr/lib/python3.11
+creating /tmp/spkr-build-python-validators/dist/usr/lib/python3.11/site-packages
+creating /tmp/spkr-build-python-validators/dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/__init__.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/between.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/btc_address.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/card.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/domain.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/email.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/extremes.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/hashes.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/iban.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/ip_address.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/length.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/mac_address.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/slug.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/truthy.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/url.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/utils.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+copying build/lib/validators/uuid.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators
+creating /tmp/spkr-build-python-validators/dist/usr/lib/python3.11/site-packages/validators/i18n
+copying build/lib/validators/i18n/__init__.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/i18n
+copying build/lib/validators/i18n/es.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/i18n
+copying build/lib/validators/i18n/fi.py -> /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/i18n
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/__init__.py to __init__.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/between.py to between.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/btc_address.py to btc_address.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/card.py to card.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/domain.py to domain.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/email.py to email.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/extremes.py to extremes.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/hashes.py to hashes.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/iban.py to iban.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/ip_address.py to ip_address.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/length.py to length.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/mac_address.py to mac_address.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/slug.py to slug.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/truthy.py to truthy.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/url.py to url.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/utils.py to utils.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/uuid.py to uuid.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/i18n/__init__.py to __init__.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/i18n/es.py to es.cpython-311.pyc
+byte-compiling /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators/i18n/fi.py to fi.cpython-311.pyc
+running install_egg_info
+Copying validators.egg-info to /tmp/spkr-build-python-validators//dist/usr/lib/python3.11/site-packages/validators-0.20.0-py3.11.egg-info
+running install_scripts

@@ -1,0 +1,11 @@
+name: python-validators
+version: 0.20.0
+description: Python Data Validation for Humans.
+author: Konsta Vesterinen
+maintainer: Skythrew
+sources:
+- https://github.com/|name|/validators/archive/refs/tags/|version|.tar.gz
+deps:
+- python
+run:
+- python
