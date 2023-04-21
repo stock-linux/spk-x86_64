@@ -1,0 +1,23 @@
+tar -xf $SRC/dbus-$version.tar.*
+cd dbus-$version
+
+export CC="gcc -m32 -mstackrealign"
+export CXX="g++ -m32 -mstackrealign"
+
+./configure --prefix=/usr                        \
+            --sysconfdir=/etc                    \
+            --libdir=/usr/lib32                  \
+	    --localstatedir=/var                 \
+            --runstatedir=/run                   \
+            --disable-static                     \
+            --disable-doxygen-docs               \
+            --disable-xml-docs                   \
+            --docdir=/usr/share/doc/dbus-$version  \
+            --with-system-socket=/run/dbus/system_bus_socket
+
+make
+
+make DESTDIR=$PKG install
+
+rm -r "$PKG"/{etc,var}
+rm -r "$PKG"/usr/{bin,include,lib,share}

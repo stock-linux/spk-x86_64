@@ -1,0 +1,14 @@
+tar -xf $SRC/file-$version.tar.*
+cd file-$version
+
+CC="gcc -m32" ./configure \
+    --prefix=/usr         \
+    --libdir=/usr/lib32   \
+    --host=i686-pc-linux-gnu
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+rm -rf DESTDIR

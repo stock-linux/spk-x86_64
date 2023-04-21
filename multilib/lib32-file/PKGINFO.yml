@@ -1,0 +1,9 @@
+name: lib32-file
+version: '5.44'
+description: 32-bit libraries for file
+author: Ian Darwin
+maintainer: Skythrew
+sources:
+- https://astron.com/pub/file/file-|version|.tar.gz
+deps:
+- zlib

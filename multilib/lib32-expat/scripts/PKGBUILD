@@ -1,0 +1,15 @@
+tar -xf $SRC/expat-$version.tar.*
+cd expat-$version
+
+CC="gcc -m32" ./configure \
+    --prefix=/usr        \
+    --disable-static     \
+    --libdir=/usr/lib32  \
+    --host=i686-pc-linux-gnu
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+rm -rf DESTDIR

@@ -1,0 +1,10 @@
+name: lib32-glibc
+version: '2.37'
+description: The 32-bit glibc libraries
+author: GNU Project
+maintainer: Skythrew
+run:
+- glibc
+sources:
+- https://ftp.gnu.org/gnu/glibc/glibc-|version|.tar.xz
+- https://www.linuxfromscratch.org/patches/lfs/development/glibc-|version|-fhs-1.patch

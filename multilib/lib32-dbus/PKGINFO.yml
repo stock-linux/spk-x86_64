@@ -1,0 +1,16 @@
+name: lib32-dbus
+version: 1.14.6
+description: D-Bus is a message bus system, a simple way for applications to talk
+  to one another.
+author: Red Hat Inc.
+maintainer: Skythrew
+sources:
+- https://dbus.freedesktop.org/releases/dbus/dbus-|version|.tar.xz
+deps:
+- lib32-systemd
+- coreutils
+- diffutils
+- gawk
+- grep
+- sed
+- lib32-util-linux

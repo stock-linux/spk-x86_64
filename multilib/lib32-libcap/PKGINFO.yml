@@ -1,0 +1,9 @@
+name: lib32-libcap
+version: '2.68'
+description: 32-bit libraries for libcap
+author: Andrew G. Morgan
+maintainer: Skythrew
+deps:
+- lib32-attr
+sources:
+- https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-|version|.tar.xz

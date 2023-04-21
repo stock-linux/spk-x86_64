@@ -1,0 +1,7 @@
+name: lib32-ncurses
+version: '6.4'
+description: 32-bit libraries for ncurses
+author: Thomas E. Dickey
+maintainer: Skythrew
+sources:
+- https://invisible-mirror.net/archives/ncurses/ncurses-|version|.tar.gz

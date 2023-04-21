@@ -1,0 +1,11 @@
+tar -xf $SRC/libcap-$version.tar.*
+cd libcap-$version
+
+make CC="gcc -m32 -march=i686"
+
+make CC="gcc -m32 -march=i686" lib=lib32 prefix=$PWD/DESTDIR/usr -C libcap install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+sed -e "s|^libdir=.*|libdir=/usr/lib32|" -i $PKG/usr/lib32/pkgconfig/lib{cap,psx}.pc
+chmod -v 755 $PKG/usr/lib32/libcap.so.2.68
+rm -rf DESTDIR

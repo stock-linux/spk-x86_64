@@ -1,0 +1,25 @@
+name: lib32-systemd
+version: '253'
+description: The systemd package contains programs for controlling the startup, running,
+  and shutdown of the system.
+author: Red Hat Inc.
+maintainer: Skythrew
+sources:
+- https://github.com/systemd/systemd/archive/v|version|/systemd-|version|.tar.gz
+- https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-|version|.tar.xz
+deps:
+- lib32-acl
+- lib32-attr
+- coreutils
+- diffutils
+- lib32-expat
+- gawk
+- lib32-gperf
+- grep
+- python-jinja2
+- lib32-libcap
+- meson
+- sed
+- lib32-zstd
+run:
+- -lib32-util-linux

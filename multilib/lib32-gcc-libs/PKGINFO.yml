@@ -1,0 +1,11 @@
+name: lib32-gcc-libs
+version: 12.2.0
+description: 32-bit libraries of GCC
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/gcc/gcc-|version|/gcc-|version|.tar.xz
+deps:
+- mpfr
+- mpc
+- gmp

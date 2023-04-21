@@ -1,0 +1,7 @@
+name: lib32-zstd
+version: 1.5.5
+description: 32-bit libraries for zstd
+author: Yann Collet
+maintainer: Skythrew
+sources:
+- https://github.com/facebook/zstd/releases/download/v|version|/zstd-|version|.tar.gz

@@ -1,0 +1,15 @@
+tar -xf $SRC/xz-$version.tar.*
+cd xz-$version
+
+CC="gcc -m32" ./configure \
+    --host=i686-pc-linux-gnu      \
+    --prefix=/usr                 \
+    --libdir=/usr/lib32           \
+    --disable-static
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+rm -rf DESTDIR

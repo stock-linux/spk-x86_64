@@ -1,0 +1,20 @@
+tar -xf $SRC/e2fsprogs-$version.tar.*
+cd e2fsprogs-$version
+
+mkdir -v build
+cd       build
+
+export CC="gcc -m32"
+export CXX='g++ -m32'
+export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+../configure --prefix=/usr           \
+             --sysconfdir=/etc       \
+	     --libdir=/usr/lib32     \
+             --enable-elf-shlibs     \
+	     --disable-{debugfs,imager,resizer,fsck,uuidd,libuuid,libblkid}
+make
+
+make DESTDIR=$PKG install-libs
+
+rm -rf "$PKG"/usr/{bin,include,share}

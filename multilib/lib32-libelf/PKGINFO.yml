@@ -1,0 +1,13 @@
+name: lib32-libelf
+version: '0.189'
+description: 32-bit libraries for libelf
+author: Unknown
+maintainer: Skythrew
+deps:
+- lib32-zlib
+- lib32-zstd
+- lib32-bzip2
+- lib32-xz
+- lib32-glibc
+sources:
+- https://sourceware.org/ftp/elfutils/|version|/elfutils-|version|.tar.bz2

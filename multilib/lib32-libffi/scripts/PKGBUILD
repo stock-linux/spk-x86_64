@@ -1,0 +1,16 @@
+tar -xf $SRC/libffi-$version.tar.*
+cd libffi-$version
+
+CC="gcc -m32" CXX="g++ -m32" ./configure \
+    --host=i686-pc-linux-gnu \
+    --prefix=/usr            \
+    --libdir=/usr/lib32      \
+    --disable-static         \
+    --with-gcc-arch=i686
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+rm -rf DESTDIR

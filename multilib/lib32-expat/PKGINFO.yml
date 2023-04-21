@@ -1,0 +1,7 @@
+name: lib32-expat
+version: 2.5.0
+description: The Expat package contains a stream oriented C library for parsing XML.
+author: James Clark
+maintainer: Skythrew
+sources:
+- https://prdownloads.sourceforge.net/expat/expat-|version|.tar.xz

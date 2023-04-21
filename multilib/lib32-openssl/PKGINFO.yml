@@ -1,0 +1,13 @@
+name: lib32-openssl
+version: 3.1.0
+description: The OpenSSL package contains management tools and libraries relating
+  to cryptography. These are useful for providing cryptographic functions to other
+  packages, such as OpenSSH, email applications, and web browsers (for accessing HTTPS
+  sites).
+author: Richard Levitte
+maintainer: Skythrew
+sources:
+- https://www.openssl.org/source/openssl-|version|.tar.gz
+deps:
+- perl
+- zlib

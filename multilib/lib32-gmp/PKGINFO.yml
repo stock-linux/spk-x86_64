@@ -1,0 +1,11 @@
+name: lib32-gmp
+version: 6.2.1
+description: 32-bit libraries for gmp
+author: GNU Project
+maintainer: Skythrew
+deps:
+- binutils
+- lib32-glibc
+- expect
+sources:
+- https://ftp.gnu.org/gnu/gmp/gmp-|version|.tar.xz

@@ -1,0 +1,8 @@
+name: lib32-bzip2
+version: 1.0.8
+description: 32-bit libraries for bzip2
+author: Julian Seward
+maintainer: Skythrew
+sources:
+- https://www.sourceware.org/pub/bzip2/bzip2-|version|.tar.gz
+- https://www.linuxfromscratch.org/patches/lfs/development/bzip2-|version|-install_docs-1.patch

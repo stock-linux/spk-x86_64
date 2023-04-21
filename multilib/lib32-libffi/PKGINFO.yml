@@ -1,0 +1,7 @@
+name: lib32-libffi
+version: 3.4.4
+description: 32-bit libraries for libffi
+author: Anthony Green
+maintainer: Skythrew
+sources:
+- https://github.com/libffi/libffi/releases/download/v|version|/libffi-|version|.tar.gz

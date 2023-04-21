@@ -1,0 +1,13 @@
+name: lib32-kmod
+version: '30'
+description: The Kmod package contains libraries and utilities for loading kernel
+  modules.
+author: Lucas De Marchi
+maintainer: Skythrew
+deps:
+- lib32-openssl
+- lib32-xz
+- lib32-zstd
+- lib32-zlib
+sources:
+- https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-|version|.tar.xz

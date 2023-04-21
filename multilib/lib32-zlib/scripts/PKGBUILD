@@ -1,0 +1,13 @@
+tar -xf $SRC/zlib-$version.tar.*
+cd zlib-$version
+
+CFLAGS+=" -m32" CXXFLAGS+=" -m32" \
+./configure --prefix=/usr \
+    --libdir=/usr/lib32
+
+make
+
+make DESTDIR=$PWD/DESTDIR install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+rm -rf DESTDIR

@@ -1,0 +1,17 @@
+tar -xf $SRC/elfutils-$version.tar.*
+cd elfutils-$version
+
+CC="gcc -m32" ./configure \
+    --host=i686-pc-linux-gnu \
+    --prefix=/usr            \
+    --libdir=/usr/lib32      \
+    --disable-debuginfod     \
+    --enable-libdebuginfod=dummy
+
+make
+
+make DESTDIR=$PWD/DESTDIR -C libelf install
+install -vDm644 config/libelf.pc DESTDIR/usr/lib32/pkgconfig/libelf.pc
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+rm -rf DESTDIR

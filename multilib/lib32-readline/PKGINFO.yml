@@ -1,0 +1,8 @@
+name: lib32-readline
+version: '8.2'
+description: 32-bit libraries for readline
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/readline/readline-|version|.tar.gz
+- https://www.linuxfromscratch.org/patches/lfs/development/readline-|version|-upstream_fix-1.patch

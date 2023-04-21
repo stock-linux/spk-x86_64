@@ -1,0 +1,19 @@
+name: lib32-util-linux
+version: 2.38.1
+description: The Util-linux package contains miscellaneous utility programs. Among
+  them are utilities for handling file systems, consoles, partitions, and messages.
+author: Linux Kernel Organization
+maintainer: Skythrew
+sources:
+- https://www.kernel.org/pub/linux/utils/util-linux/v2.38/util-linux-|version|.tar.xz
+deps:
+- coreutils
+- diffutils
+- findutils
+- gawk
+- gettext
+- grep
+- lib32-ncurses
+- sed
+- lib32-zlib
+- lib32-systemd

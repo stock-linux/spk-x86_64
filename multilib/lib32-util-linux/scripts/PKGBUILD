@@ -1,0 +1,24 @@
+tar -xf $SRC/util-linux-$version.tar.*
+cd util-linux-$version
+
+export CC="gcc -m32"
+
+./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \
+            --bindir=/usr/bin    \
+            PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
+	    --libdir=/usr/lib32    \
+            --sbindir=/usr/sbin  \
+            --disable-chfn-chsh  \
+            --disable-login      \
+            --disable-nologin    \
+            --disable-su         \
+            --disable-setpriv    \
+            --disable-runuser    \
+            --disable-pylibmount \
+            --disable-static     \
+            --without-python     \
+            --docdir=/usr/share/doc/util-linux-$version
+
+make
+
+make DESTDIR=$PKG install-usrlib_execLTLIBRARIES install-pkgconfigDATA

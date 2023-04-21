@@ -1,0 +1,7 @@
+name: lib32-xz
+version: 5.4.2
+description: 32-bit libraries for xz
+author: Lasse Collin
+maintainer: Skythrew
+sources:
+- https://tukaani.org/xz/xz-|version|.tar.xz

@@ -1,0 +1,8 @@
+name: lib32-pam
+version: 1.5.2
+description: 32-bit libraries for pam
+author: Sun Microsystems
+maintainer: Skythrew
+sources:
+- https://github.com/linux-pam/linux-pam/releases/download/v|version|/Linux-PAM-|version|.tar.xz
+- https://github.com/linux-pam/linux-pam/releases/download/v|version|/Linux-PAM-|version|-docs.tar.xz

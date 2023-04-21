@@ -1,0 +1,10 @@
+tar -xf $SRC/zstd-$version.tar.*
+cd zstd-$version
+
+CC="gcc -m32" make prefix=/usr
+
+make prefix=/usr DESTDIR=$PWD/DESTDIR install
+mkdir -p $PKG/usr/lib32
+cp -Rv DESTDIR/usr/lib/* $PKG/usr/lib32/
+sed -e "/^libdir/s/lib$/lib32/" -i $PKG/usr/lib32/pkgconfig/libzstd.pc
+rm -rf DESTDIR

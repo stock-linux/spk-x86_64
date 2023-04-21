@@ -1,0 +1,47 @@
+tar -xf $SRC/gcc-$version.tar.*
+cd gcc-$version
+
+CHOST="x86_64-pc-linux-gnu"
+
+sed -e '/m64=/s/lib64/lib/' \
+    -e '/m32=/s/m32=.*/m32=..\/lib32$(call if_multiarch,:i386-linux-gnu)/' \
+    -i.orig gcc/config/i386/t-linux64
+
+mkdir -v build
+cd       build
+
+mlist=m64,m32
+../configure --prefix=/usr               \
+             LD=ld                       \
+             --enable-languages=c,c++    \
+             --enable-default-pie        \
+             --enable-default-ssp        \
+             --enable-multilib           \
+             --with-multilib-list=$mlist \
+             --disable-bootstrap         \
+             --with-system-zlib
+
+make
+
+make -C $CHOST/32/libgcc DESTDIR="$PKG" install-shared
+rm -f "$pkgdir/$_libdir/32/libgcc_eh.a"
+
+for lib in libatomic \
+           libgfortran \
+           libgo \
+           libgomp \
+           libitm \
+           libquadmath \
+           libsanitizer/{a,l,ub}san \
+           libstdc++-v3/src \
+           libvtv; do
+  make -C $CHOST/32/$lib DESTDIR="$PKG" install-toolexeclibLTLIBRARIES
+done
+
+make -C $CHOST/32/libobjc DESTDIR="$PKG" install-libs
+
+make -C $CHOST/libphobos DESTDIR="$PKG" install
+rm -f "$PKG"/usr/lib32/libgphobos.spec
+
+# remove files provided by gcc-libs
+rm -rf "$PKG"/usr/lib

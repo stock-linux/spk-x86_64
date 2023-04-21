@@ -1,0 +1,38 @@
+tar -xf $SRC/systemd-$version.tar.*
+cd systemd-$version
+
+sed -i -e 's/GROUP="render"/GROUP="video"/' \
+       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
+
+export CC="gcc -m32"
+export CXX="g++ -m32"
+export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+
+mkdir -p build
+cd       build
+
+meson --prefix=/usr                 \
+      --buildtype=release           \
+      --libexecdir	/usr/lib32  \
+      --libdir		/usr/lib32  \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Dsysusers=false              \
+      -Drpmmacrosdir=no             \
+      -Dhomed=false                 \
+      -Duserdb=false                \
+      -Dman=false                   \
+      -Dmode=release                \
+      -Dpamconfdir=no               \
+      -Ddev-kvm-mode=0660           \
+      -Ddocdir=/usr/share/doc/systemd-$version \
+      ..
+
+ninja
+
+DESTDIR=$PKG ninja install
+
+rm -rf "$PKG"/{etc,var}
+rm -rf "$PKG"/usr/{bin,include,lib,lib32/systemd,share}
