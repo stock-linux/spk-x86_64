@@ -1,0 +1,6 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+make EFIDIR=STOCK EFI_LOADER=grubx64.efi
+
+make DESTDIR=$PKG install EFIDIR=STOCK
