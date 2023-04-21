@@ -1,0 +1,21 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+mkdir -pv $PKG/usr/share/fonts/unifont &&
+gunzip -c $SRC/unifont-15.0.01.pcf.gz > $PKG/usr/share/fonts/unifont/unifont.pcf
+
+patch -Np1 -i $SRC/$name-$version-upstream_fixes-1.patch
+
+./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --disable-efiemu     \
+            --enable-grub-mkfont \
+            --with-platform=efi  \
+            --target=x86_64      \
+            --disable-werror     &&
+unset TARGET_CC &&
+make
+
+make DESTDIR=$PKG install
+mkdir -p $PKG/usr/share/bash-completion/completions
+mv -v $PKG/etc/bash_completion.d/grub $PKG/usr/share/bash-completion/completions/
