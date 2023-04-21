@@ -1,0 +1,5 @@
+tar -xf $SRC/$name-$version.tar.gz
+cd $name-$version
+
+mkdir -p $PKG/etc
+cp services protocols $PKG/etc

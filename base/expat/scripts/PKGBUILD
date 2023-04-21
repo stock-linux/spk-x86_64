@@ -1,0 +1,12 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/$name-$version
+
+make
+
+make DESTDIR=$PKG install
+
+install -v -Dm644 doc/*.{html,css} $PKG/usr/share/doc/$name-$version

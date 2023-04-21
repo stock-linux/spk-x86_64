@@ -1,0 +1,24 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr           \
+             --sysconfdir=/etc       \
+             --enable-elf-shlibs     \
+             --disable-libblkid      \
+             --disable-libuuid       \
+             --disable-uuidd         \
+             --disable-fsck
+
+make
+
+make DESTDIR=$PKG install
+
+rm -fv $PKG/usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
+gunzip -v $PKG/usr/share/info/libext2fs.info.gz
+
+makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo
+mkdir -p $PKG/usr/share/info
+install -v -m644 doc/com_err.info $PKG/usr/share/info

@@ -1,0 +1,9 @@
+name: bc
+version: 6.5.0
+description: The Bc package contains an arbitrary precision numeric processing language.
+author: Robert Morris and Lorinda Cherry
+maintainer: Skythrew
+sources:
+- https://github.com/gavinhoward/|name|/releases/download/|version|/|name|-|version|.tar.xz
+deps:
+- readline

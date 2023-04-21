@@ -1,0 +1,16 @@
+name: python
+version: 3.11.3
+description: The Python 3 package contains the Python development environment. It
+  is useful for object-oriented programming, writing scripts, prototyping large programs,
+  and developing entire applications. Python is an interpreted computer language.
+author: Guido van Rossum
+maintainer: Skythrew
+sources:
+- https://www.|name|.org/ftp/|name|/|version|/Python-|version|.tar.xz
+- https://www.|name|.org/ftp/|name|/doc/|version|/|name|-|version|-docs-html.tar.bz2
+deps:
+- bzip2
+- openssl
+- zlib
+- expat
+- libffi

@@ -1,0 +1,25 @@
+name: systemd
+version: '253'
+description: The systemd package contains programs for controlling the startup, running,
+  and shutdown of the system.
+author: Red Hat Inc.
+maintainer: Skythrew
+sources:
+- https://github.com/|name|/|name|/archive/v|version|/|name|-|version|.tar.gz
+- https://anduin.linuxfromscratch.org/LFS/|name|-man-pages-|version|.tar.xz
+deps:
+- acl
+- attr
+- coreutils
+- diffutils
+- expat
+- gawk
+- gperf
+- grep
+- python-jinja2
+- libcap
+- meson
+- sed
+- zstd
+run:
+- -util-linux

@@ -1,0 +1,15 @@
+name: vim
+version: 9.0.1472
+description: The Vim package contains a powerful text editor.
+author: Bram Moolenaar
+maintainer: Skythrew
+sources:
+- https://github.com/|name|/|name|/archive/refs/tags/v|version|.tar.gz
+deps:
+- acl
+- attr
+- coreutils
+- diffutils
+- sed
+- grep
+- ncurses

@@ -1,0 +1,9 @@
+name: readline
+version: '8.2'
+description: The Readline package is a set of libraries that offer command-line editing
+  and history capabilities.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz
+- https://www.linuxfromscratch.org/patches/lfs/development/|name|-|version|-upstream_fix-1.patch

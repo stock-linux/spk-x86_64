@@ -1,0 +1,12 @@
+name: gzip
+version: '1.12'
+description: The Gzip package contains programs for compressing and decompressing
+  files.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- coreutils
+- grep
+- sed

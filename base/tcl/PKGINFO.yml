@@ -1,0 +1,11 @@
+name: tcl
+version: 8.6.13
+description: The Tcl package contains the Tool Command Language, a robust general-purpose
+  scripting language.
+author: John Ousterhout
+maintainer: Skythrew
+sources:
+- https://downloads.sourceforge.net/|name|/|name||version|-src.tar.gz
+- https://downloads.sourceforge.net/|name|/|name||version|-html.tar.gz
+deps:
+- zlib

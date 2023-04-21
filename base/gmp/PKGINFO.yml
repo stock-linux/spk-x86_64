@@ -1,0 +1,11 @@
+name: gmp
+version: 6.2.1
+description: The GMP package contains math libraries.
+author: GNU Project
+maintainer: Skythrew
+deps:
+- binutils
+- glibc
+- expect
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz

@@ -1,0 +1,7 @@
+name: expat
+version: 2.5.0
+description: The Expat package contains a stream oriented C library for parsing XML.
+author: James Clark
+maintainer: Skythrew
+sources:
+- https://prdownloads.sourceforge.net/|name|/|name|-|version|.tar.xz

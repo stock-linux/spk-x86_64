@@ -1,0 +1,8 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+make prefix=/usr
+
+make prefix=$PKG/usr install
+
+rm -v $PKG/usr/lib/libzstd.a

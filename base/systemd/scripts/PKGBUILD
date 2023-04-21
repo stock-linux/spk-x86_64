@@ -1,0 +1,32 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+sed -i -e 's/GROUP="render"/GROUP="video"/' \
+       -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
+
+mkdir -p build
+cd       build
+
+meson --prefix=/usr                 \
+      --buildtype=release           \
+      -Ddefault-dnssec=no           \
+      -Dfirstboot=false             \
+      -Dinstall-tests=false         \
+      -Dldconfig=false              \
+      -Dsysusers=false              \
+      -Drpmmacrosdir=no             \
+      -Dhomed=false                 \
+      -Duserdb=false                \
+      -Dman=false                   \
+      -Dmode=release                \
+      -Dpamconfdir=no               \
+      -Ddev-kvm-mode=0660           \
+      -Ddocdir=/usr/share/doc/$name-$version \
+      ..
+
+ninja
+
+DESTDIR=$PKG ninja install
+
+mkdir -p $PKG/usr/share/man
+tar -xf $SRC/$name-man-pages-$version.tar.xz --strip-components=1 -C $PKG/usr/share/man

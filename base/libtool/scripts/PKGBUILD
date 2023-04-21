@@ -1,0 +1,10 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr
+
+make
+
+make DESTDIR=$PKG install
+
+rm -fv $PKG/usr/lib/libltdl.a

@@ -1,0 +1,10 @@
+name: libtool
+version: 2.4.7
+description: The Libtool package contains the GNU generic library support script.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- grep
+- sed

@@ -1,0 +1,5 @@
+tar -xf $SRC/MarkupSafe-$version.tar.*
+cd MarkupSafe-$version
+
+python3 setup.py build
+python3 setup.py install --root=$PKG

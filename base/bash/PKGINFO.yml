@@ -1,0 +1,10 @@
+name: bash
+version: 5.2.15
+description: The Bash package contains the Bourne-Again Shell.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz
+deps:
+- ncurses
+- readline

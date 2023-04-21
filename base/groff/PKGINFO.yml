@@ -1,0 +1,13 @@
+name: groff
+version: 1.22.4
+description: The Groff package contains programs for processing and formatting text
+  and images.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz
+deps:
+- coreutils
+- gawk
+- grep
+- sed

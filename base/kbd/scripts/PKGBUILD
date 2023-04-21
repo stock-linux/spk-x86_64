@@ -1,0 +1,16 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+patch -Np1 -i $SRC/$name-$version-backspace-1.patch
+
+sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure
+sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in
+
+./configure --prefix=/usr --disable-vlock
+
+make
+
+make DESTDIR=$PKG install
+
+mkdir -pv           $PKG/usr/share/doc/$name-$version
+cp -R -v docs/doc/* $PKG/usr/share/doc/$name-$version

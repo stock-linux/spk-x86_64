@@ -1,0 +1,16 @@
+name: e2fsprogs
+version: 1.47.0
+description: The E2fsprogs package contains the utilities for handling the ext2 file
+  system. It also supports the ext3 and ext4 journaling file systems.
+author: Theodore Ts'o
+maintainer: Skythrew
+sources:
+- https://downloads.sourceforge.net/project/|name|/|name|/v|version|/|name|-|version|.tar.gz
+deps:
+- coreutils
+- diffutils
+- gawk
+- grep
+- gzip
+- sed
+- texinfo

@@ -1,0 +1,9 @@
+name: ninja
+version: 1.11.1
+description: Ninja is a small build system with a focus on speed.
+author: Evan Martin
+maintainer: Skythrew
+sources:
+- https://github.com/|name|-build/|name|/archive/v|version|/|name|-|version|.tar.gz
+deps:
+- python

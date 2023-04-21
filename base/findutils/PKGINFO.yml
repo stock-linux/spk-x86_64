@@ -1,0 +1,12 @@
+name: findutils
+version: 4.9.0
+description: The Findutils package contains programs to find files.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- gettext
+- sed
+- grep
+- coreutils

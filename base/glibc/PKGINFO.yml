@@ -1,0 +1,8 @@
+name: glibc
+version: '2.37'
+description: The Glibc package contains the main C library.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+- https://www.linuxfromscratch.org/patches/lfs/development/|name|-|version|-fhs-1.patch

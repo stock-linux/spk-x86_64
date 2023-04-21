@@ -1,0 +1,10 @@
+name: gdbm
+version: '1.23'
+description: The GDBM package contains the GNU Database Manager.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz
+deps:
+- bash
+- readline

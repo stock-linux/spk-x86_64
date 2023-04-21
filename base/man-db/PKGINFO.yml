@@ -1,0 +1,20 @@
+name: man-db
+version: 2.11.2
+description: The Man-DB package contains programs for finding and viewing man pages.
+author: Colin Watson
+maintainer: Skythrew
+deps:
+- bzip2
+- coreutils
+- flex
+- gdbm
+- gettext
+- grep
+- groff
+- gzip
+- less
+- libpipeline
+- sed
+- xz
+sources:
+- https://download.savannah.gnu.org/releases/|name|/|name|-|version|.tar.xz

@@ -1,0 +1,16 @@
+name: dbus
+version: 1.14.6
+description: D-Bus is a message bus system, a simple way for applications to talk
+  to one another.
+author: Red Hat Inc.
+maintainer: Skythrew
+sources:
+- https://|name|.freedesktop.org/releases/|name|/|name|-|version|.tar.xz
+deps:
+- systemd
+- coreutils
+- diffutils
+- gawk
+- grep
+- sed
+- util-linux

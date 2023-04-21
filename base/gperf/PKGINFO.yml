@@ -1,0 +1,7 @@
+name: gperf
+version: '3.1'
+description: Gperf generates a perfect hash function from a key set.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz

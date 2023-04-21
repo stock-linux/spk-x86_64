@@ -1,0 +1,10 @@
+name: procps-ng
+version: 4.0.3
+description: The Procps-ng package contains programs for monitoring processes.
+author: Procps-NG Team
+maintainer: Skythrew
+sources:
+- https://sourceforge.net/projects/|name|/files/Production/|name|-|version|.tar.xz
+deps:
+- ncurses
+- systemd

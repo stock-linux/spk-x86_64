@@ -1,0 +1,5 @@
+tar -xf $SRC/Jinja2-$version.tar.*
+cd Jinja2-$version
+
+python3 setup.py build
+python3 setup.py install --root=$PKG

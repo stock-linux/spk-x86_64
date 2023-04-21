@@ -1,0 +1,13 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+sed -i 's/extras//' Makefile.in
+
+./configure --prefix=/usr
+
+make
+
+make LN='ln -f' DESTDIR=$PKG install
+
+mkdir -pv                                   $PKG/usr/share/doc/$name-$version
+cp    -v doc/{awkforai.txt,*.{eps,pdf,jpg}} $PKG/usr/share/doc/$name-$version

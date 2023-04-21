@@ -1,0 +1,8 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+sed -i '/install -m.*STA/d' libcap/Makefile
+
+make prefix=/usr lib=lib
+
+make prefix=$PKG/usr lib=lib install

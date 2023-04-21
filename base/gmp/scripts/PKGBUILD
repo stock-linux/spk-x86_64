@@ -1,0 +1,13 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr    \
+            --enable-cxx     \
+            --disable-static \
+            --docdir=/usr/share/doc/$name-$version
+
+make
+make html
+
+make DESTDIR=$PKG install
+make DESTDIR=$PKG install-html

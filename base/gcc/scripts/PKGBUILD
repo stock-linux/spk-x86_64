@@ -1,0 +1,92 @@
+tar -xf $SRC/gcc-$version.tar.*
+cd gcc-$version
+
+CHOST="x86_64-pc-linux-gnu"
+
+sed -e '/m64=/s/lib64/lib/' \
+    -e '/m32=/s/m32=.*/m32=..\/lib32$(call if_multiarch,:i386-linux-gnu)/' \
+    -i.orig gcc/config/i386/t-linux64
+
+mkdir -v build
+cd       build
+
+mlist=m64,m32
+../configure --prefix=/usr               \
+             LD=ld                       \
+             --enable-languages=c,c++    \
+             --enable-default-pie        \
+             --enable-default-ssp        \
+             --enable-multilib           \
+             --with-multilib-list=$mlist \
+             --disable-bootstrap         \
+             --with-system-zlib
+
+make
+
+make -C gcc DESTDIR="$PKG" install-driver install-cpp install-gcc-ar \
+    c++.install-common install-headers install-plugin install-lto-wrapper
+
+install -m755 -t "$PKG/usr/bin/" gcc/gcov{,-tool}
+install -m755 -t "$PKG/usr/lib/gcc/$CHOST/${version%%+*}/" gcc/{cc1,cc1plus,collect2,lto1}
+
+make -C $CHOST/libgcc DESTDIR="$PKG" install
+make -C $CHOST/32/libgcc DESTDIR="$PKG" install
+rm -f "$PKG"/usr/lib{,32}/libgcc_s.so*
+
+make -C $CHOST/libstdc++-v3/src DESTDIR="$PKG" install
+make -C $CHOST/libstdc++-v3/include DESTDIR="$PKG" install
+make -C $CHOST/libstdc++-v3/libsupc++ DESTDIR="$PKG" install
+make -C $CHOST/libstdc++-v3/python DESTDIR="$PKG" install
+make -C $CHOST/32/libstdc++-v3/src DESTDIR="$PKG" install
+make -C $CHOST/32/libstdc++-v3/include DESTDIR="$PKG" install
+make -C $CHOST/32/libstdc++-v3/libsupc++ DESTDIR="$PKG" install
+
+make DESTDIR="$PKG" install-libcc1
+install -d "$PKG/usr/share/gdb/auto-load/usr/lib"
+mv "$PKG"/usr/lib/libstdc++.so.6.*-gdb.py \
+  "$PKG/usr/share/gdb/auto-load/usr/lib/"
+rm "$PKG"/usr/lib{,32}/libstdc++.so*
+
+make DESTDIR="$PKG" install-fixincludes
+make -C gcc DESTDIR="$PKG" install-mkheaders
+
+make -C lto-plugin DESTDIR="$PKG" install
+install -dm755 "$PKG"/usr/lib/bfd-plugins/
+ln -s /usr/lib/gcc/$CHOST/${version%%+*}/liblto_plugin.so \
+  "$PKG/usr/lib/bfd-plugins/"
+
+make -C $CHOST/libgomp DESTDIR="$PKG" install-nodist_{libsubinclude,toolexeclib}HEADERS
+make -C $CHOST/libitm DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+make -C $CHOST/libquadmath DESTDIR="$PKG" install-nodist_libsubincludeHEADERS
+make -C $CHOST/libsanitizer DESTDIR="$PKG" install-nodist_{saninclude,toolexeclib}HEADERS
+make -C $CHOST/libsanitizer/asan DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+make -C $CHOST/libsanitizer/tsan DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+make -C $CHOST/libsanitizer/lsan DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+make -C $CHOST/32/libgomp DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+make -C $CHOST/32/libitm DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+make -C $CHOST/32/libsanitizer DESTDIR="$PKG" install-nodist_{saninclude,toolexeclib}HEADERS
+make -C $CHOST/32/libsanitizer/asan DESTDIR="$PKG" install-nodist_toolexeclibHEADERS
+
+make -C gcc DESTDIR="$PKG" install-man install-info
+rm "$PKG"/usr/share/man/man1/{gccgo,gfortran,lto-dump,gdc}.1
+rm "$PKG"/usr/share/info/{gccgo,gfortran,gnat-style,gnat_rm,gnat_ugn,gdc}.info
+
+make -C libcpp DESTDIR="$PKG" install
+make -C gcc DESTDIR="$PKG" install-po
+
+# many packages expect this symlink
+ln -s gcc "$PKG"/usr/bin/cc
+
+for binary in {c++,g++,gcc,gcc-ar,gcc-nm,gcc-ranlib}; do
+  ln -s /usr/bin/${binary} "${PKG}"/usr/bin/x86_64-linux-gnu-${binary}
+done
+
+# install the libstdc++ man pages
+make -C $CHOST/libstdc++-v3/doc DESTDIR="$PKG" doc-install-man
+
+# remove files provided by lib32-gcc-libs
+rm -f "$PKG"/usr/lib32/lib{stdc++,gcc_s}.so
+
+# byte-compile python libraries
+python -m compileall "$PKG/usr/share/gcc-${version%%+*}/"
+python -O -m compileall "$PKG/usr/share/gcc-${version%%+*}/"

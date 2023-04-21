@@ -1,0 +1,21 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+patch -Np1 -i $SRC/$name-$version-i18n-1.patch
+
+sed '/if ( ! match/s/ed_checksums//' -i src/digest.c
+
+autoreconf -fiv
+FORCE_UNSAFE_CONFIGURE=1 ./configure \
+            --prefix=/usr            \
+            --enable-no-install-program=kill,uptime
+
+make
+
+make DESTDIR=$PKG install
+
+mkdir -p $PKG/usr/sbin
+mkdir -p $PKG/usr/share/man/man8
+mv -v $PKG/usr/bin/chroot $PKG/usr/sbin
+mv -v $PKG/usr/share/man/man1/chroot.1 $PKG/usr/share/man/man8/chroot.8
+sed -i 's/"1"/"8"/' $PKG/usr/share/man/man8/chroot.8

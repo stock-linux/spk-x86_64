@@ -1,0 +1,8 @@
+name: zstd
+version: 1.5.5
+description: Zstandard is a real-time compression algorithm, providing high compression
+  ratios.
+author: Yann Collet
+maintainer: Skythrew
+sources:
+- https://github.com/facebook/|name|/releases/download/v|version|/|name|-|version|.tar.gz

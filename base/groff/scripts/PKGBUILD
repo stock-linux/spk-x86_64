@@ -1,0 +1,8 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+PAGE=A4 ./configure --prefix=/usr
+
+make
+
+make DESTDIR=$PKG install

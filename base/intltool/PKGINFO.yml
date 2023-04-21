@@ -1,0 +1,16 @@
+name: intltool
+version: 0.51.0
+description: The Intltool is an internationalization tool used for extracting translatable
+  strings from source files.
+author: Unknown
+maintainer: Skythrew
+sources:
+- https://launchpad.net/|name|/trunk/|version|/+download/|name|-|version|.tar.gz
+deps:
+- perl-xmlparser
+- sed
+- perl
+run:
+- perl
+- perl-xmlparser
+- sed

@@ -1,0 +1,9 @@
+name: bzip2
+version: 1.0.8
+description: The Bzip2 package contains programs for compressing and decompressing
+  files.
+author: Julian Seward
+maintainer: Skythrew
+sources:
+- https://www.sourceware.org/pub/|name|/|name|-|version|.tar.gz
+- https://www.linuxfromscratch.org/patches/lfs/development/|name|-|version|-install_docs-1.patch

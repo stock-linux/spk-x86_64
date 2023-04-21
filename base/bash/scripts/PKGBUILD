@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr             \
+            --without-bash-malloc     \
+            --with-installed-readline \
+            --docdir=/usr/share/doc/$name-$version
+
+make
+
+make DESTDIR=$PKG install

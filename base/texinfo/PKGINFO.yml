@@ -1,0 +1,14 @@
+name: texinfo
+version: 7.0.3
+description: The Texinfo package contains programs for reading, writing, and converting
+  info pages.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- ncurses
+- patch
+- sed
+- gettext
+- grep

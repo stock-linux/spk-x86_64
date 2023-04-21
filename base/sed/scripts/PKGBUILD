@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr
+
+make
+make html
+
+make DESTDIR=$PKG install
+install -d -m755           $PKG/usr/share/doc/$name-$version
+install -m644 doc/sed.html $PKG/usr/share/doc/$name-$version

@@ -1,0 +1,10 @@
+name: pam
+version: 1.5.2
+description: The Linux PAM package contains Pluggable Authentication Modules used
+  by the local system administrator to control how application programs authenticate
+  users.
+author: Sun Microsystems
+maintainer: Skythrew
+sources:
+- https://github.com/linux-|name|/linux-|name|/releases/download/v|version|/Linux-PAM-|version|.tar.xz
+- https://github.com/linux-|name|/linux-|name|/releases/download/v|version|/Linux-PAM-|version|-docs.tar.xz

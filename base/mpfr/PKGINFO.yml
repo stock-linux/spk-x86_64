@@ -1,0 +1,9 @@
+name: mpfr
+version: 4.2.0
+description: The MPFR package contains functions for multiple precision math.
+author: GNU Project
+maintainer: Skythrew
+deps:
+- gmp
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz

@@ -1,0 +1,13 @@
+tar -xf $SRC/elfutils-$version.tar.*
+cd elfutils-$version
+
+./configure --prefix=/usr                \
+            --disable-debuginfod         \
+            --enable-libdebuginfod=dummy
+
+make
+
+make -C libelf DESTDIR=$PKG install
+mkdir -p $PKG/usr/lib/pkgconfig
+install -vm644 config/libelf.pc $PKG/usr/lib/pkgconfig
+rm $PKG/usr/lib/libelf.a

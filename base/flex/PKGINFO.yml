@@ -1,0 +1,12 @@
+name: flex
+version: 2.6.4
+description: The Flex package contains a utility for generating programs that recognize
+  patterns in text.
+author: Vern Paxson
+maintainer: Skythrew
+sources:
+- https://github.com/westes/|name|/releases/download/v|version|/|name|-|version|.tar.gz
+deps:
+- m4
+run:
+- m4

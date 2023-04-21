@@ -1,0 +1,12 @@
+name: patch
+version: 2.7.6
+description: The Patch package contains a program for modifying or creating files
+  by applying a 'patch' file typically created by the diff program.
+author: GNU Project
+maintainer: Skythrew
+deps:
+- coreutils
+- grep
+- sed
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz

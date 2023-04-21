@@ -1,0 +1,12 @@
+name: perl-xmlparser
+version: '2.46'
+description: The XML::Parser module is a Perl interface to James Clark's XML parser,
+  Expat.
+author: Larry Wall
+maintainer: Skythrew
+sources:
+- https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-|version|.tar.gz
+deps:
+- perl
+run:
+- perl

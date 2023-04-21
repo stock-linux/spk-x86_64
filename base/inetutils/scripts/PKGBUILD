@@ -1,0 +1,19 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr        \
+            --bindir=/usr/bin    \
+            --localstatedir=/var \
+            --disable-logger     \
+            --disable-whois      \
+            --disable-rcp        \
+            --disable-rexec      \
+            --disable-rlogin     \
+            --disable-rsh        \
+            --disable-servers
+
+make
+
+make DESTDIR=$PKG install
+mkdir -p $PKG/usr/sbin
+mv -v $PKG/usr/{,s}bin/ifconfig

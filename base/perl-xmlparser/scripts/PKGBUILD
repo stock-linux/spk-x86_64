@@ -1,0 +1,8 @@
+tar -xf $SRC/XML-Parser-$version.tar.*
+cd XML-Parser-$version
+
+perl Makefile.PL
+
+make
+
+make DESTDIR=$PKG install

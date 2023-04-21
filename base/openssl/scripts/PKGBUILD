@@ -1,0 +1,16 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./config --prefix=/usr         \
+         --openssldir=/etc/ssl \
+         --libdir=lib          \
+         shared                \
+         zlib-dynamic
+
+make
+
+make MANSUFFIX=ssl DESTDIR=$PKG install
+
+mv -v $PKG/usr/share/doc/$name $PKG/usr/share/doc/$name-$version
+
+cp -vfr doc/* $PKG/usr/share/doc/$name-$version

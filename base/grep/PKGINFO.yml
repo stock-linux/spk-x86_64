@@ -1,0 +1,11 @@
+name: grep
+version: '3.10'
+description: The Grep package contains programs for searching through the contents
+  of files.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- gettext
+- sed

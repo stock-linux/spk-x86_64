@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr     \
+            --disable-static  \
+            --sysconfdir=/etc \
+            --docdir=/usr/share/doc/$name-$version
+
+make
+
+make DESTDIR=$PKG install

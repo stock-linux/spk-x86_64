@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/$name-$version
+
+make
+
+make DESTDIR=$PKG install
+chmod -v 0755 $PKG/usr/lib/preloadable_libintl.so

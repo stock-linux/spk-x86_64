@@ -1,0 +1,12 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+sed -i /ARPD/d Makefile
+rm -fv man/man8/arpd.8
+
+make NETNS_RUN_DIR=/run/netns
+
+make SBINDIR=/usr/sbin DESTDIR=$PKG install
+
+mkdir -pv             $PKG/usr/share/doc/$name-$version
+cp -v COPYING README* $PKG/usr/share/doc/$name-$version

@@ -1,0 +1,10 @@
+name: sed
+version: '4.9'
+description: The Sed package contains a stream editor.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- acl
+- attr

@@ -1,0 +1,19 @@
+name: coreutils
+version: '9.2'
+description: The Coreutils package contains the basic utility programs needed by every
+  operating system.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+- https://www.linuxfromscratch.org/patches/lfs/development/|name|-|version|-i18n-1.patch
+deps:
+- attr
+- acl
+- gmp
+- grep
+- libcap
+- openssl
+- perl
+- sed
+- gettext

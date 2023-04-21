@@ -1,0 +1,13 @@
+name: perl
+version: 5.36.0
+description: The Perl package contains the Practical Extraction and Report Language.
+author: Larry Wall
+maintainer: Skythrew
+sources:
+- https://www.cpan.org/src/5.0/|name|-|version|.tar.xz
+deps:
+- zlib
+- bzip2
+- sed
+- gdbm
+- bash

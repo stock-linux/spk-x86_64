@@ -1,0 +1,13 @@
+name: kmod
+version: '30'
+description: The Kmod package contains libraries and utilities for loading kernel
+  modules.
+author: Lucas De Marchi
+maintainer: Skythrew
+deps:
+- openssl
+- xz
+- zstd
+- zlib
+sources:
+- https://www.kernel.org/pub/linux/utils/kernel/|name|/|name|-|version|.tar.xz

@@ -1,0 +1,10 @@
+name: automake
+version: 1.16.5
+description: The Automake package contains programs for generating Makefiles for use
+  with Autoconf.
+deps:
+- autoconf
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz

@@ -1,0 +1,12 @@
+name: meson
+version: 1.1.0
+description: Meson is an open source build system designed to be both extremely fast
+  and as user friendly as possible.
+author: Jussi Pakkanen
+maintainer: Skythrew
+sources:
+- https://github.com/|name|build/|name|/releases/download/|version|/|name|-|version|.tar.gz
+deps:
+- python
+run:
+- python

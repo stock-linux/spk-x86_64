@@ -1,0 +1,9 @@
+name: check
+version: 0.15.2
+description: Check is a unit testing framework for C.
+author: Check Team (a lot of people)
+maintainer: Skythrew
+sources:
+- https://github.com/lib|name|/|name|/releases/download/|version|/|name|-|version|.tar.gz
+deps:
+- sed

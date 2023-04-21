@@ -1,0 +1,20 @@
+tar -xf $SRC/Python-$version.tar.*
+cd Python-$version
+
+./configure --prefix=/usr        \
+            --enable-shared      \
+            --with-system-expat  \
+            --with-system-ffi    \
+            --enable-optimizations
+
+make
+
+make DESTDIR=$PKG install
+
+install -v -dm755 $PKG/usr/share/doc/$name-$version/html
+
+tar --strip-components=1  \
+    --no-same-owner       \
+    --no-same-permissions \
+    -C $PKG/usr/share/doc/$name-$version/html \
+    -xvf $SRC/$name-$version-docs-html.tar.bz2

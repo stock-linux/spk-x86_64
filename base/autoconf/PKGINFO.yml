@@ -1,0 +1,18 @@
+name: autoconf
+version: '2.71'
+description: The Autoconf package contains programs for producing shell scripts that
+  can automatically configure source code.
+author: GNU Project
+maintainer: Skythrew
+deps:
+- m4
+- grep
+- sed
+- perl
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+run:
+- perl
+- m4
+- grep
+- sed

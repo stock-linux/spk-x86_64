@@ -1,0 +1,10 @@
+name: file
+version: '5.44'
+description: The File package contains a utility for determining the type of a given
+  file or files.
+author: Ian Darwin
+maintainer: Skythrew
+sources:
+- https://astron.com/pub/|name|/|name|-|version|.tar.gz
+deps:
+- zlib

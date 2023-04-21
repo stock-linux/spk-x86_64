@@ -1,0 +1,61 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+patch -Np1 -i $SRC/$name-$version-fhs-1.patch
+
+sed '/width -=/s/workend - string/number_length/' \
+    -i stdio-common/vfprintf-process-arg.c
+
+mkdir -v build
+cd       build
+
+echo "rootsbindir=/usr/sbin" > configparms
+
+../configure --prefix=/usr                            \
+             --disable-werror                         \
+             --enable-kernel=3.2                      \
+             --enable-stack-protector=strong          \
+             --with-headers=/usr/include              \
+             --enable-multi-arch                      \
+             libc_cv_slibdir=/usr/lib
+
+make
+
+sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
+
+make DESTDIR=$PKG install
+
+sed '/RTLDLIST=/s@/usr@@g' -i $PKG/usr/bin/ldd
+
+mkdir -p $PKG/etc
+cp -v ../nscd/nscd.conf $PKG/etc/nscd.conf
+mkdir -pv $PKG/var/cache/nscd
+
+install -v -Dm644 ../nscd/nscd.tmpfiles $PKG/usr/lib/tmpfiles.d/nscd.conf
+install -v -Dm644 ../nscd/nscd.service $PKG/usr/lib/systemd/system/nscd.service
+
+make install_root=$PKG localedata/install-locales
+
+cat > $PKG/etc/nsswitch.conf << "EOF"
+# Begin /etc/nsswitch.conf
+
+passwd: files
+group: files
+shadow: files
+
+hosts: files dns
+networks: files
+
+protocols: files
+services: files
+ethers: files
+rpc: files
+
+# End /etc/nsswitch.conf
+EOF
+
+cat > $PKG/etc/ld.so.conf << "EOF"
+# Begin /etc/ld.so.conf
+/usr/local/lib
+/opt/lib
+EOF

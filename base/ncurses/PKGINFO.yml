@@ -1,0 +1,8 @@
+name: ncurses
+version: '6.4'
+description: The Ncurses package contains libraries for terminal-independent handling
+  of character screens.
+author: Thomas E. Dickey
+maintainer: Skythrew
+sources:
+- https://invisible-mirror.net/archives/|name|/|name|-|version|.tar.gz

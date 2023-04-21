@@ -1,0 +1,11 @@
+name: python-pip
+version: '23.1'
+description: The famous Python packaging tool
+author: Ian Bicking
+maintainer: Skythrew
+deps:
+- python
+run:
+- python
+sources:
+- https://github.com/pypa/pip/archive/refs/tags/|version|.tar.gz

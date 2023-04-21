@@ -1,0 +1,14 @@
+name: iproute2
+version: 6.2.0
+description: The IPRoute2 package contains programs for basic and advanced IPV4-based
+  networking.
+author: Alexey Kuznetsov
+maintainer: Skythrew
+sources:
+- https://www.kernel.org/pub/linux/utils/net/|name|/|name|-|version|.tar.xz
+deps:
+- flex
+- coreutils
+- libcap
+- libelf
+- zlib

@@ -1,0 +1,19 @@
+tar -xf $SRC/v$version.tar.*
+cd $name-$version
+
+echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
+
+./configure --prefix=/usr
+
+make
+
+make DESTDIR=$PKG install
+
+ln -sv vim $PKG/usr/bin/vi
+for L in  /usr/share/man/{,*/}man1/vim.1; do
+    ln -sv vim.1 $PKG/$(dirname $L)/vi.1
+done
+
+mkdir -p $PKG/usr/share/doc
+ln -sv ../vim/vim90/doc $PKG/usr/share/doc/$name-$version
+

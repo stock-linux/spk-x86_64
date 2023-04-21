@@ -1,0 +1,14 @@
+name: libelf
+version: '0.189'
+description: Libelf is a library for handling ELF (Executable and Linkable Format)
+  files.
+author: Unknown
+maintainer: Skythrew
+deps:
+- bzip2
+- glibc
+- xz
+- zlib
+- zstd
+sources:
+- https://sourceware.org/ftp/elfutils/|version|/elfutils-|version|.tar.bz2

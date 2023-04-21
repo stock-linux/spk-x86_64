@@ -1,0 +1,12 @@
+name: bison
+version: 3.8.2
+description: The Bison package contains a parser generator.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- gettext
+- m4
+- sed
+- zlib

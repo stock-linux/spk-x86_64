@@ -1,0 +1,13 @@
+name: binutils
+version: '2.40'
+description: The Binutils package contains a linker, an assembler, and other tools
+  for handling object files.
+author: GNU Project
+maintainer: Skythrew
+deps:
+- file
+- flex
+- glibc
+- zlib
+sources:
+- https://sourceware.org/pub/|name|/releases/|name|-|version|.tar.xz

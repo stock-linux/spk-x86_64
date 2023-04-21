@@ -1,0 +1,7 @@
+name: m4
+version: 1.4.19
+description: The M4 package contains a macro processor.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz

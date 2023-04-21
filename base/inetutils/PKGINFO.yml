@@ -1,0 +1,10 @@
+name: inetutils
+version: '2.4'
+description: The Inetutils package contains programs for basic networking.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.xz
+deps:
+- ncurses
+- zlib

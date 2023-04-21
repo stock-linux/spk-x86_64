@@ -1,0 +1,12 @@
+name: dejagnu
+version: 1.6.3
+description: The DejaGnu package contains a framework for running test suites on GNU
+  tools.
+author: GNU Project
+maintainer: Skythrew
+deps:
+- expect
+run:
+- expect
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz

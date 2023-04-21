@@ -1,0 +1,23 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr       \
+             --sysconfdir=/etc   \
+             --enable-gold       \
+             --enable-ld=default \
+             --enable-plugins    \
+             --enable-shared     \
+             --disable-werror    \
+             --enable-64-bit-bfd \
+             --with-system-zlib  \
+             --enable-multilib
+
+make tooldir=/usr
+
+make tooldir=/usr DESTDIR=$PKG install
+
+rm -fv $PKG/usr/lib/lib{bfd,ctf,ctf-nobfd,sframe,opcodes}.{la,a}
+rm -fv $PKG/usr/share/man/man1/{gprofng,gp-*}.1

@@ -1,0 +1,27 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+patch -Np1 -i $SRC/$name-$version-install_docs-1.patch
+
+sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+
+sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
+
+make -f Makefile-libbz2_so
+make clean
+
+make
+
+make PREFIX=$PKG/usr install
+
+mkdir -p $PKG/usr/lib
+cp -av libbz2.so.* $PKG/usr/lib
+ln -sv libbz2.so.1.0.8 $PKG/usr/lib/libbz2.so
+
+mkdir -p $PKG/usr/bin
+cp -v bzip2-shared $PKG/usr/bin/bzip2
+for i in /usr/bin/{bzcat,bunzip2}; do
+  ln -sfv bzip2 $PKG/$i
+done
+
+rm -fv $PKG/usr/lib/libbz2.a
