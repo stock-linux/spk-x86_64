@@ -1,0 +1,7 @@
+name: mandoc
+version: 1.14.6
+description: mandoc is an utility to format manual pages.
+author: Kristaps Dzonsons
+maintainer: Skythrew
+sources:
+- https://|name|.bsd.lv/snapshots/|name|-|version|.tar.gz

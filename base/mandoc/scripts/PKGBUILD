@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure &&
+make mandoc
+
+mkdir -p $PKG/usr/bin
+mkdir -p $PKG/usr/share/man/man1
+
+install -vm755 mandoc   $PKG/usr/bin &&
+install -vm644 mandoc.1 $PKG/usr/share/man/man1
