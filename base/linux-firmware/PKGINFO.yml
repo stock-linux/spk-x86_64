@@ -1,0 +1,9 @@
+name: linux-firmware
+version: '20230404'
+description: Linux firmware is a package distributed alongside the Linux kernel that
+  contains firmware binary blobs necessary for partial or full functionality of certain
+  hardware devices.
+author: Unknown
+maintainer: Skythrew
+sources:
+- https://git.kernel.org/pub/scm/linux/kernel/git/firmware/|name|.git/snapshot/|name|-|version|.tar.gz
