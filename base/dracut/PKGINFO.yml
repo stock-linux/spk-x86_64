@@ -1,0 +1,12 @@
+name: dracut
+version: 059
+description: dracut the event driven initramfs infrastructure
+author: Harald Hoyer
+maintainer: Skythrew
+sources:
+- https://github.com/|name|devs/|name|/archive/refs/tags/|version|.tar.gz
+- '|name|-systemd253.patch'
+deps:
+- cpio
+run:
+- cpio
