@@ -1,0 +1,5 @@
+tar -xf $SRC/$version.tar.*
+cd decorator-$version
+
+python setup.py build
+python setup.py install --prefix=/usr --root=$PKG --optimize=1 --skip-build

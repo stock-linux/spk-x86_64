@@ -1,0 +1,13 @@
+name: python-decorator
+version: 5.1.1
+description: The goal of the decorator module is to make it easy to define signature-preserving
+  function decorators and decorator factories. It also includes an implementation
+  of multiple dispatch and other niceties.
+author: Michele Simionato
+maintainer: Skythrew
+sources:
+- https://github.com/micheles/decorator/archive/refs/tags/|version|.tar.gz
+deps:
+- python
+run:
+- python
