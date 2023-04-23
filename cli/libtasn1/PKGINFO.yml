@@ -1,0 +1,8 @@
+name: libtasn1
+version: 4.19.0
+description: libtasn1 is a highly portable C library that encodes and decodes DER/BER
+  data following an ASN.1 schema.
+author: GNU Project
+maintainer: Skythrew
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-|version|.tar.gz
