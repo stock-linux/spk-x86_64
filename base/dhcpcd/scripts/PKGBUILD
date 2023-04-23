@@ -1,0 +1,32 @@
+tar -xf $SRC/v$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr                \
+            --sysconfdir=/etc            \
+            --libexecdir=/usr/lib/dhcpcd \
+            --dbdir=/var/lib/dhcpcd      \
+            --runstatedir=/run           \
+            --disable-privsep         &&
+make
+
+make DESTDIR=$PKG install
+
+UNITDIR=$PKG/usr/lib/systemd/system/
+mkdir -p $UNITDIR
+cat > $UNITDIR/dhcpcd@.service << EOF
+[Unit]
+Description=dhcpcd on %I
+Wants=network.target
+Before=network.target
+BindsTo=sys-subsystem-net-devices-%i.device
+After=sys-subsystem-net-devices-%i.device
+
+[Service]
+Type=forking
+PIDFile=/run/dhcpcd/%I.pid
+ExecStart=/sbin/dhcpcd -q -w %I
+ExecStop=/sbin/dhcpcd -x %I
+
+[Install]
+WantedBy=multi-user.target
+EOF
