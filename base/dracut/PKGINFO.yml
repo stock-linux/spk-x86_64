@@ -5,7 +5,6 @@ author: Harald Hoyer
 maintainer: Skythrew
 sources:
 - https://github.com/|name|devs/|name|/archive/refs/tags/|version|.tar.gz
-- '|name|-systemd253.patch'
 deps:
 - cpio
 run:

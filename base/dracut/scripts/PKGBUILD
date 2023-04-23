@@ -1,7 +1,6 @@
 tar -xf $SRC/$version.tar.*
 cd $name-$version
 
-patch -Np1 < $SRC/$name-systemd253.patch
 ./configure --prefix=/usr --disable-documentation
 
 make
