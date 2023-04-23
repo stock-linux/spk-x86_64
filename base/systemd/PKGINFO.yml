@@ -1,5 +1,5 @@
 name: systemd
-version: '253'
+version: '252'
 description: The systemd package contains programs for controlling the startup, running,
   and shutdown of the system.
 author: Red Hat Inc.
