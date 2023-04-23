@@ -11,6 +11,7 @@ make
 
 make DESTDIR=$PKG install
 
+ln -s python3 $PKG/usr/bin/python
 install -v -dm755 $PKG/usr/share/doc/$name-$version/html
 
 tar --strip-components=1  \
