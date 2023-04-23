@@ -19,7 +19,8 @@ meson --prefix=/usr                 \
       -Duserdb=false                \
       -Dman=false                   \
       -Dmode=release                \
-      -Dpamconfdir=no               \
+      -Dpam=true                    \
+      -Dpamconfdir=/etc/pam.d       \
       -Ddev-kvm-mode=0660           \
       -Ddocdir=/usr/share/doc/$name-$version \
       ..
@@ -30,3 +31,38 @@ DESTDIR=$PKG ninja install
 
 mkdir -p $PKG/usr/share/man
 tar -xf $SRC/$name-man-pages-$version.tar.xz --strip-components=1 -C $PKG/usr/share/man
+
+mkdir -p $PKG/etc/pam.d
+cat > $PKG/etc/pam.d/system-session << "EOF"
+# Begin /etc/pam.d/system-session
+
+session   required    pam_unix.so
+
+# Begin Systemd addition
+
+session  required    pam_loginuid.so
+session  optional    pam_systemd.so
+
+# End Systemd addition
+
+# End /etc/pam.d/system-session
+EOF
+
+cat > $PKG/etc/pam.d/systemd-user << "EOF"
+# Begin /etc/pam.d/systemd-user
+
+account  required    pam_access.so
+account  include     system-account
+
+session  required    pam_env.so
+session  required    pam_limits.so
+session  required    pam_unix.so
+session  required    pam_loginuid.so
+session  optional    pam_keyinit.so force revoke
+session  optional    pam_systemd.so
+
+auth     required    pam_deny.so
+password required    pam_deny.so
+
+# End /etc/pam.d/systemd-user
+EOF
