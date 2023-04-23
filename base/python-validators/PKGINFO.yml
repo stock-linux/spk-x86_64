@@ -9,3 +9,4 @@ deps:
 - python
 run:
 - python
+- python-decorator
