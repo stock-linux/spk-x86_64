@@ -1,0 +1,10 @@
+name: p11-kit
+version: 0.24.1
+description: 'The p11-kit package provides a way to load and enumerate PKCS #11 (a
+  Cryptographic Token Interface Standard) modules.'
+author: Stef Walter
+maintainer: Skythrew
+sources:
+- https://github.com/p11-glue/|name|/releases/download/|version|/|name|-|version|.tar.xz
+deps:
+- libtasn1
