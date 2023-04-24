@@ -1,5 +1,5 @@
 name: lib32-util-linux
-version: 2.38.1
+version: 2.38.1-1
 description: The Util-linux package contains miscellaneous utility programs. Among
   them are utilities for handling file systems, consoles, partitions, and messages.
 author: Linux Kernel Organization

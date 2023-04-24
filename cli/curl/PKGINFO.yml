@@ -1,5 +1,5 @@
 name: curl
-version: 8.0.1
+version: 8.0.1-1
 description: 'The cURL package contains an utility and a library used for transferring
   files with URL syntax to any of the following protocols: DICT, FILE, FTP, FTPS,
   GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTSP,

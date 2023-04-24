@@ -1,5 +1,5 @@
 name: shadow
-version: '4.13'
+version: 4.13-1
 description: The Shadow package contains programs for handling passwords in a secure
   way.
 author: Unknown

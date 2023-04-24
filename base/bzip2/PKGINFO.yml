@@ -1,5 +1,5 @@
 name: bzip2
-version: 1.0.8
+version: 1.0.8-1
 description: The Bzip2 package contains programs for compressing and decompressing
   files.
 author: Julian Seward

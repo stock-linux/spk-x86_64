@@ -1,5 +1,5 @@
 name: glibc
-version: '2.37'
+version: 2.37-1
 description: The Glibc package contains the main C library.
 author: GNU Project
 maintainer: Skythrew

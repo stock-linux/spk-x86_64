@@ -1,5 +1,5 @@
 name: iana-etc
-version: '20230405'
+version: 20230405-1
 description: The Iana-Etc package provides data for network services and protocols.
 author: IANA Team
 maintainer: Skythrew

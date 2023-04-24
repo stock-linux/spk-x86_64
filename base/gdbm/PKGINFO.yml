@@ -1,5 +1,5 @@
 name: gdbm
-version: '1.23'
+version: 1.23-1
 description: The GDBM package contains the GNU Database Manager.
 author: GNU Project
 maintainer: Skythrew

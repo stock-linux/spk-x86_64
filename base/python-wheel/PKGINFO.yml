@@ -1,5 +1,5 @@
 name: python-wheel
-version: 0.40.0
+version: 0.40.0-1
 description: Wheel is a Python library that is the reference implementation of the
   Python wheel packaging standard.
 author: Daniel Holth

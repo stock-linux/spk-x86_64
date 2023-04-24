@@ -1,5 +1,5 @@
 name: dracut
-version: 059
+version: 059-1
 description: dracut the event driven initramfs infrastructure
 author: Harald Hoyer
 maintainer: Skythrew

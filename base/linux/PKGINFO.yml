@@ -1,5 +1,5 @@
 name: linux
-version: 6.2.12
+version: 6.2.12-1
 description: The well-known Linux kernel
 author: Linus Torvalds
 maintainer: Skythrew

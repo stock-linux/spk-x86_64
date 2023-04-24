@@ -1,5 +1,5 @@
 name: expect
-version: 5.45.4
+version: 5.45.4-1
 description: The Expect package contains tools for automating, via scripted dialogues,
   interactive applications such as telnet, ftp, passwd, fsck, rlogin, and tip.
 author: Don Libes
