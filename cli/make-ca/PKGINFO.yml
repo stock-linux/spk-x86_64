@@ -1,0 +1,9 @@
+name: make-ca
+version: '1.12'
+description: A simple script to download SSL certs for HTTPS connections
+author: LFS Team
+maintainer: Skythrew
+sources:
+- https://github.com/lfs-book/|name|/releases/download/v|version|/|name|-|version|.tar.xz
+run:
+- p11-kit

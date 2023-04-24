@@ -1,0 +1,5 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+make DESTDIR=$PKG install
+install -vdm755 $PKG/etc/ssl/local
