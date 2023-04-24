@@ -1,5 +1,5 @@
 name: lib32-file
-version: '5.44'
+version: 5.44-1
 description: 32-bit libraries for file
 author: Ian Darwin
 maintainer: Skythrew

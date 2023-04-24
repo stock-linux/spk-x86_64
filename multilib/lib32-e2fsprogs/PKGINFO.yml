@@ -1,5 +1,5 @@
 name: lib32-e2fsprogs
-version: 1.47.0
+version: 1.47.0-1
 description: The E2fsprogs package contains the utilities for handling the ext2 file
   system. It also supports the ext3 and ext4 journaling file systems.
 author: Theodore Ts'o

@@ -1,5 +1,5 @@
 name: kernel-headers
-version: 6.2.12
+version: 6.2.12-1
 description: Linux API Headers
 author: Linus Torvalds
 maintainer: Skythrew<mael.guerin@outlook.fr>

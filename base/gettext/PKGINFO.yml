@@ -1,5 +1,5 @@
 name: gettext
-version: 0.21.1
+version: 0.21.1-1
 description: The Gettext package contains utilities for internationalization and localization.
 author: GNU Project
 maintainer: Skythrew

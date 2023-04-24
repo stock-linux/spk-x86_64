@@ -1,5 +1,5 @@
 name: make-ca
-version: '1.12'
+version: 1.12-1
 description: A simple script to download SSL certs for HTTPS connections
 author: LFS Team
 maintainer: Skythrew

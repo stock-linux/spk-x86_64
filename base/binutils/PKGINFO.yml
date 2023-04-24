@@ -1,5 +1,5 @@
 name: binutils
-version: '2.40'
+version: 2.40-1
 description: The Binutils package contains a linker, an assembler, and other tools
   for handling object files.
 author: GNU Project

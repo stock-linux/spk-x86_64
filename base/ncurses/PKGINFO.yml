@@ -1,5 +1,5 @@
 name: ncurses
-version: '6.4'
+version: 6.4-1
 description: The Ncurses package contains libraries for terminal-independent handling
   of character screens.
 author: Thomas E. Dickey

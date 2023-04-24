@@ -1,5 +1,5 @@
 name: python-docopt
-version: 0.6.2
+version: 0.6.2-1
 description: Pythonic command line arguments parser, that will make you smile
 author: Vladimir Keleshev
 maintainer: Skythrew
