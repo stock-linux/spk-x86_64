@@ -1,7 +1,7 @@
 name: git
 version: 2.40.0
 description: Git is a free and open source, distributed version control system designed
-  to handle everything from small to very large projects with speed and efficiency.
+  to handle everything from small to very large projects with speed and efficiency like the Linux kernel.
 author: Linus Torvalds
 maintainer: Skythrew
 sources:
