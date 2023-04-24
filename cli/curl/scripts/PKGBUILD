@@ -1,0 +1,18 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr                           \
+            --disable-static                        \
+            --with-openssl                          \
+            --enable-threaded-resolver              \
+            --with-ca-path=/etc/ssl/certs &&
+make
+
+make DESTDIR=$PKG install
+
+rm -rf docs/examples/.deps &&
+
+find docs \( -name Makefile\* -o -name \*.1 -o -name \*.3 \) -exec rm {} \; &&
+
+install -v -d -m755 $PKG/usr/share/doc/$name-$version &&
+cp -v -R docs/*     $PKG/usr/share/doc/$name-$version
