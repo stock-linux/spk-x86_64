@@ -1,5 +1,5 @@
 name: grub
-version: '2.06'
+version: 2.06-1
 description: The GRUB package provides GRand Unified Bootloader.
 author: GNU Project
 maintainer: Skythrew

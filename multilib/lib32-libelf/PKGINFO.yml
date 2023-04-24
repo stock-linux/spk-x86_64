@@ -1,5 +1,5 @@
 name: lib32-libelf
-version: '0.189'
+version: 0.189-1
 description: 32-bit libraries for libelf
 author: Unknown
 maintainer: Skythrew

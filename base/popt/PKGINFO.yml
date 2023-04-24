@@ -1,5 +1,5 @@
 name: popt
-version: '1.19'
+version: 1.19-1
 description: The popt package contains the popt libraries which are used by some programs
   to parse command-line options.
 author: Jeff Johnson

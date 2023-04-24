@@ -1,5 +1,5 @@
 name: zstd
-version: 1.5.5
+version: 1.5.5-1
 description: Zstandard is a real-time compression algorithm, providing high compression
   ratios.
 author: Yann Collet

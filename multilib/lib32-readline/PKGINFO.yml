@@ -1,5 +1,5 @@
 name: lib32-readline
-version: '8.2'
+version: 8.2-1
 description: 32-bit libraries for readline
 author: GNU Project
 maintainer: Skythrew

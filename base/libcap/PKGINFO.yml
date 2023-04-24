@@ -1,5 +1,5 @@
 name: libcap
-version: '2.68'
+version: 2.68-1
 description: The Libcap package implements the userspace interface to the POSIX 1003.1e
   capabilities available in Linux kernels. These capabilities partition the all-powerful
   root privilege into a set of distinct privileges.

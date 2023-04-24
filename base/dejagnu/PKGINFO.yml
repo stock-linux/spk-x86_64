@@ -1,5 +1,5 @@
 name: dejagnu
-version: 1.6.3
+version: 1.6.3-1
 description: The DejaGnu package contains a framework for running test suites on GNU
   tools.
 author: GNU Project

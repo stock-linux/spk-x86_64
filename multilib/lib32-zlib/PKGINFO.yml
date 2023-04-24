@@ -1,5 +1,5 @@
 name: lib32-zlib
-version: 1.2.13
+version: 1.2.13-1
 description: 32-bit libraries for zlib
 author: Mark Adler
 maintainer: Skythrew

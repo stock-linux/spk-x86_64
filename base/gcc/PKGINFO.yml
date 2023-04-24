@@ -1,5 +1,5 @@
 name: gcc
-version: 12.2.0
+version: 12.2.0-1
 description: The GCC package contains the GNU compiler collection, which includes
   the C and C++ compilers.
 sources:

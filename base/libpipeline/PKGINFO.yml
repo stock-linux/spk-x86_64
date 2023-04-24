@@ -1,5 +1,5 @@
 name: libpipeline
-version: 1.5.7
+version: 1.5.7-1
 description: The Libpipeline package contains a library for manipulating pipelines
   of subprocesses in a flexible and convenient way.
 author: Colin Watson

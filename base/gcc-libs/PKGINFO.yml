@@ -1,5 +1,5 @@
 name: gcc-libs
-version: 12.2.0
+version: 12.2.0-1
 description: GCC libraries
 author: GNU Project
 maintainer: Skythrew

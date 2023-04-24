@@ -1,5 +1,5 @@
 name: sed
-version: '4.9'
+version: 4.9-1
 description: The Sed package contains a stream editor.
 author: GNU Project
 maintainer: Skythrew

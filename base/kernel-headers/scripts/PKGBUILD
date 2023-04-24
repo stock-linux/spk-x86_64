@@ -1,0 +1,9 @@
+tar -xf $SRC/linux-$version.tar.*
+cd linux-$version
+
+make mrproper
+
+make headers
+find usr/include -type f ! -name '*.h' -delete
+mkdir -p $PKG/usr
+cp -rv usr/include $PKG/usr

@@ -1,5 +1,5 @@
 name: gzip
-version: '1.12'
+version: 1.12-1
 description: The Gzip package contains programs for compressing and decompressing
   files.
 author: GNU Project

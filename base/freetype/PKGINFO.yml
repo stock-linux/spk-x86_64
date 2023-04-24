@@ -1,5 +1,5 @@
 name: freetype
-version: 2.13.0
+version: 2.13.0-1
 description: The FreeType2 package contains a library which allows applications to
   properly render TrueType fonts.
 author: David Turner

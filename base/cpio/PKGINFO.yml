@@ -1,5 +1,5 @@
 name: cpio
-version: '2.13'
+version: 2.13-1
 description: The cpio package contains tools for archiving.
 author: GNU Project
 maintainer: Skythrew

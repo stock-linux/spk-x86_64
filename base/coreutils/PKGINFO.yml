@@ -1,5 +1,5 @@
 name: coreutils
-version: '9.2'
+version: 9.2-1
 description: The Coreutils package contains the basic utility programs needed by every
   operating system.
 author: GNU Project
