@@ -1,0 +1,12 @@
+tar -xf $SRC/$name-$version.tar.*
+cd $name-$version
+
+./configure --prefix=/usr \
+            --with-gitconfig=/etc/gitconfig \
+            --with-python=python3 &&
+make
+
+make perllibdir=/usr/lib/perl5/$(ls /usr/lib/perl5/)/site_perl DESTDIR=$PKG install
+mkdir -p $PKG/usr/share/man
+tar -xf $SRC/$name-manpages-$version.tar.xz \
+    -C $PKG/usr/share/man --no-same-owner --no-overwrite-dir
