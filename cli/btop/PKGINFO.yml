@@ -1,0 +1,8 @@
+name: btop
+version: 1.2.13-2
+description: Resource monitor that shows usage and stats for processor, memory, disks,
+  network and processes.
+author: aristocratos
+sources:
+- https://github.com/aristocratos/|name|/archive/refs/tags/v|version|.tar.gz
+maintainer: Cammi
