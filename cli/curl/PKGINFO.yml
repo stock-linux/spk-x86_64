@@ -3,9 +3,7 @@ version: 8.0.1-1
 description: 'The cURL package contains an utility and a library used for transferring
   files with URL syntax to any of the following protocols: DICT, FILE, FTP, FTPS,
   GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTSP,
-  SMB, SMBS, SMTP, SMPTS, TELNET, and TFTP. Its ability to both download and upload
-  files can be incorporated into other programs to support functions like streaming
-  media.'
+  SMB, SMBS, SMTP, SMPTS, TELNET, and TFTP.'
 author: Daniel Stenberg
 maintainer: Skythrew
 sources:
