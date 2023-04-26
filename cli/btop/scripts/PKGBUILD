@@ -1,0 +1,6 @@
+tar -xf $SRC/v$version.tar.gz
+cd $name-$version
+
+make
+
+make PREFIX=/usr DESTDIR=$PKG install
