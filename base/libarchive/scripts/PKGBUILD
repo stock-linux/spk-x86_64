@@ -1,0 +1,9 @@
+tar -xf $SRC/$name-$version.tar.xz
+cd $name-$version
+
+./configure --prefix=/usr --disable-static &&
+make
+
+make DESTDIR=$PKG install
+
+sed -i "s/iconv //" $PKG/usr/lib/pkgconfig/libarchive.pc
