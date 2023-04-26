@@ -1,5 +1,5 @@
 name: dhcpcd
-version: 10.0.1
+version: 10.0.1-1
 description: dhcpcd is an implementation of the DHCP client specified in RFC2131.
   A DHCP client is useful for connecting your computer to a network which uses DHCP
   to assign network addresses. dhcpcd strives to be a fully featured, yet very lightweight

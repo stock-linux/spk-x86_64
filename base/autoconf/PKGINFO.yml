@@ -1,5 +1,5 @@
 name: autoconf
-version: '2.71'
+version: 2.71-1
 description: The Autoconf package contains programs for producing shell scripts that
   can automatically configure source code.
 author: GNU Project

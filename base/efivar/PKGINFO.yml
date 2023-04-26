@@ -1,5 +1,5 @@
 name: efivar
-version: '38'
+version: 38-1
 description: The efivar package provides tools and libraries to manipulate EFI variables.
 author: Peter Jones
 maintainer: Skythrew

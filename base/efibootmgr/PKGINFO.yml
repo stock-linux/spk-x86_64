@@ -1,5 +1,5 @@
 name: efibootmgr
-version: '18'
+version: 18-1
 description: The efibootmgr package provides tools and libraries to manipulate EFI
   variables.
 author: Robbie Harwood

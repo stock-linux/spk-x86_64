@@ -1,5 +1,5 @@
 name: lib32-pam
-version: 1.5.2
+version: 1.5.2-1
 description: 32-bit libraries for pam
 author: Sun Microsystems
 maintainer: Skythrew

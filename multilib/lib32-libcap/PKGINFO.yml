@@ -1,5 +1,5 @@
 name: lib32-libcap
-version: '2.68'
+version: 2.68-1
 description: 32-bit libraries for libcap
 author: Andrew G. Morgan
 maintainer: Skythrew

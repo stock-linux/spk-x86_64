@@ -1,5 +1,5 @@
 name: linux-firmware
-version: '20230404'
+version: 20230404-1
 description: Linux firmware is a package distributed alongside the Linux kernel that
   contains firmware binary blobs necessary for partial or full functionality of certain
   hardware devices.

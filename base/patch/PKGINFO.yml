@@ -1,5 +1,5 @@
 name: patch
-version: 2.7.6
+version: 2.7.6-1
 description: The Patch package contains a program for modifying or creating files
   by applying a 'patch' file typically created by the diff program.
 author: GNU Project

@@ -1,5 +1,5 @@
 name: bc
-version: 6.5.0
+version: 6.5.0-1
 description: The Bc package contains an arbitrary precision numeric processing language.
 author: Robert Morris and Lorinda Cherry
 maintainer: Skythrew

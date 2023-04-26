@@ -1,5 +1,5 @@
 name: flex
-version: 2.6.4
+version: 2.6.4-1
 description: The Flex package contains a utility for generating programs that recognize
   patterns in text.
 author: Vern Paxson

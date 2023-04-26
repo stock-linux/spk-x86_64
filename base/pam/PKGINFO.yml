@@ -1,5 +1,5 @@
 name: pam
-version: 1.5.2
+version: 1.5.2-1
 description: The Linux PAM package contains Pluggable Authentication Modules used
   by the local system administrator to control how application programs authenticate
   users.

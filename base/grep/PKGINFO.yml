@@ -1,5 +1,5 @@
 name: grep
-version: '3.10'
+version: 3.10-1
 description: The Grep package contains programs for searching through the contents
   of files.
 author: GNU Project
