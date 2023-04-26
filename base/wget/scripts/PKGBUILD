@@ -1,0 +1,9 @@
+tar -xf $SRC/$name-$version.tar.gz
+cd $name-$version
+
+./configure --prefix=/usr      \
+            --sysconfdir=/etc  \
+            --with-ssl=openssl &&
+make
+
+make DESTDIR=$PKG install

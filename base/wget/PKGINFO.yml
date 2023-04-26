@@ -1,0 +1,8 @@
+name: wget
+version: 1.21.3-1
+description: 'The Wget package contains a utility useful for non-interactive downloading
+  of files from the Web. '
+author: gscrivano
+sources:
+- https://ftp.gnu.org/gnu/|name|/|name|-1.21.3.tar.gz
+maintainer: Cammi
