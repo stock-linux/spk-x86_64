@@ -1,0 +1,8 @@
+name: libnl
+version: 3.7.0-1
+description: The libnl suite is a collection of libraries providing APIs to netlink
+  protocol based Linux kernel interfaces.
+author: Thomas Haller
+sources:
+- https://github.com/thom311/|name|/releases/download/|name|3_7_0/|name|-3.7.0.tar.gz
+maintainer: Cammi
