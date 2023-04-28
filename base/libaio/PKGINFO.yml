@@ -1,0 +1,7 @@
+name: libaio
+version: 0.3.113-1
+description: The Linux-native asynchronous I/O facility (aio) library
+author: Greg
+maintainer: Cammi
+sources:
+- https://pagure.io/|name|/archive/|name|-0.3.113/|name|-0.3.113.tar.gz

@@ -1,0 +1,11 @@
+tar -xf $SRC/$name-$version.tar.gz
+cd $name-$version
+
+sed -i '/install.*libaio.a/s/^/#/' src/Makefile
+
+make
+
+make prefix=$PKG/usr install
+
+install -vDm 644 {ChangeLog,README.md} -t $PKG/usr/share/doc/$name/
+install -vDm 644 man/*.3 -t $PKG/usr/share/man/man3/
