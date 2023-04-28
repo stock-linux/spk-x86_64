@@ -1,0 +1,14 @@
+tar -xf $SRC/LVM2.$version.tgz
+cd LVM2.$version
+
+./configure \
+--prefix=/usr \
+--exec-prefix= \
+--with-confdir=/etc \
+--mandir=/usr/share/man \
+--enable-cmdlib \
+--enable-pkgconfig \
+--enable-udev_sync
+
+make
+make DESTDIR=$PKG install
