@@ -1,0 +1,9 @@
+name: lvm2
+version: 2.03.21-1
+description: The LVM2 package is a set of tools that manage logical partitions.
+maintainer: Cammi
+sources:
+- https://sourceware.org/ftp/|name|/LVM2.2.03.21.tgz
+author: Red Hat
+deps:
+- libaio util-linux
